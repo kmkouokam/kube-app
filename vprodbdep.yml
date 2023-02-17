@@ -36,7 +36,7 @@ spec:
 
           image: kmkouokam/vprofiledb:V1
           args:
-            - "ignire-db-dir=lost+found"
+            - "--ignire-db-dir=lost+found"
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: vpro-db-data
