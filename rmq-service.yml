@@ -8,6 +8,6 @@ spec:
       targetPort: vprormq-port
       protocol: TCP
   selector:
-    app: vprormq
+    app: vpromq
   type: ClusterIP
 

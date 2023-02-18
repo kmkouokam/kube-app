@@ -1,27 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vprormq
+  name: vpromq
   labels:
-    app: vprormq
+    app: vpromq
 spec:
   selector:
     matchLabels:
-      app: vprormq
+      app: vpromq
   replicas: 1
   template:
     metadata:
       labels:
-        app: vprormq
+        app: vpromq
     spec:
       containers:
-        - name: vprormq
+        - name: vpromq
           image: rabbitmq
-          args:
-            - "--ignore-db-dir=lost+found"
-          volumeMounts:
-            - mountPath: /var/lib/mysql
-              name: vpro-rmq-data
           ports:
             - name: vprormq-port
               containerPort: 15672
